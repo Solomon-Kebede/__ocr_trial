@@ -13,3 +13,19 @@ from engine.google import url4batchexecute
 
 import asyncio
 import aiohttp
+
+logging.basicConfig(
+	level=logging.ERROR,
+	format=' %(asctime)s -%(levelname)s - %(message)s'
+	)
+
+image_paths = [
+"./test_images/everything-has-beauty-confucius-quote.jpg",
+"./test_images/maya-angelou-famous-quote.webp",
+"./test_images/download2.jpg",
+"./test_images/download.jpg",
+"./test_images/d760e79a7997acefb79c917b7771d75f.jpg",
+"./test_images/03ab9fbff391a8a3de0569050745a555.jpg",
+"./test_images/download.png",
+"./test_images/2101793258-amharic-poem.jpg"
+]
