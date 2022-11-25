@@ -37,3 +37,10 @@ def read_image(file_path):
 	with open(file_path, 'rb') as f:
 		return f.read()
 
+def get_path(file_path_list):
+	index = 0
+	while index < len(file_path_list):
+		yield file_path_list[index]
+		index += 1
+
+
