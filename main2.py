@@ -143,3 +143,5 @@ async def main():
 				print(f"{ocr_item}")
 			print()
 
+if __name__ == '__main__':
+	asyncio.run(main())
