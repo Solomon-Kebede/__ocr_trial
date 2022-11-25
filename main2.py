@@ -44,3 +44,20 @@ def get_path(file_path_list):
 		index += 1
 
 
+async def post(session, url, _headers, _data=None, request_type = None):
+	async with session.post(url, headers=_headers, data=_data) as response:
+		if request_type == "headers-only":
+			# print(f'Status OK: {response.ok}')
+			# return response.status, response.headers
+			if response.ok:
+				return response.headers
+			else:
+				logging.error(f'Status Code: {response.status}')
+				return None
+		elif request_type == "text-only":
+			if response.ok:
+				return await response.text()
+			else:
+				logging.error(f'Status Code: {response.status}')
+				return None
+
