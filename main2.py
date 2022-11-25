@@ -29,3 +29,6 @@ image_paths = [
 "./test_images/download.png",
 "./test_images/2101793258-amharic-poem.jpg"
 ]
+
+base_url = "https://lens.google.com"
+endpoint_1 = f"{base_url}/_/upload/"
